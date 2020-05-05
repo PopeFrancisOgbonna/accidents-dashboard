@@ -10,31 +10,85 @@
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <div class="card-title">
-                <h1 class="text-center">Sign Up</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/src/img/accident2.jpg" alt="" class="img-responsive accidentImage">
             </div>
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Full Name:</label>
-                        <input type="text" name="name" id="fullName" placeholder="Enter Full Name" required class="form-control">
-                        <label for="address">Adress:</label>
-                        <input type="text" name="address" id="address" required placeholder="Contact Address" class="form-control">
-                        <label for="mail">Email:</label>
-                        <input type="text" name="mail" id="email" required placeholder="Email Address" class="form-control">
-                        <label for="phone">Phone:</label>
-                        <input type="text" name="phone" id="phone" required placeholder="Phone Number" class="form-control">
-                        <label for="pass">Password:</label>
-                        <input type="text" name="pass" id="pass" required placeholder="Password" class="form-control">
-                        <label for="pass1">Confirm Password:</label>
-                        <input type="text" name="pass1" id="pass1" required placeholder="Confirm Password" class="form-control">
+            <div class="col-md-6">
+                <h6>Choose sign up option:</h6>
+                <button id="user-btn" class="btn btn-lg btn-primary">User</button>
+                <button id="service-btn" class="btn btn-lg btn-primary">Emergency Service Provider</button>
+                <!-------User Sign up form-->
+                <div class="card hide" id="user">
+                    <div class="card-title">
+                        <h1 class="text-center">Sign Up</h1>
                     </div>
-                    <button class="btn btn-lg btn-primary">Create Account</button>
-                    <span class="info">Already have an Account? <a href="/signIn.html">Login Here</a></span>
-                </form>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" name="name" id="fullName" placeholder="Enter Full Name" required class="form-control">
+                                <label for="address">Address:</label>
+                                <input type="text" name="address" id="address" required placeholder="Contact Address" class="form-control">
+                                <label for="mail">Email:</label>
+                                <input type="text" name="mail" id="email" required placeholder="Email Address" class="form-control">
+                                <label for="phone">Phone:</label>
+                                <input type="text" name="phone" id="phone" required placeholder="Phone Number" class="form-control">
+                                <label for="pass">Password:</label>
+                                <input type="text" name="pass" id="pass" required placeholder="Password" class="form-control">
+                                <label for="pass1">Confirm Password:</label>
+                                <input type="text" name="pass1" id="pass1" required placeholder="Confirm Password" class="form-control">
+                            </div>
+                            <span class="warn-user"></span> <br>
+                            <button class="btn btn-lg btn-primary" id="user-Acc">Create Account</button>
+                            <span class="info">Already have an Account? <a href="/signIn.html">Login Here</a></span>
+                        </form>
+                    </div>
+                </div>
+                <!---------------Emergency Service Provider sign up form------>
+                <div class="card hide" id="service">
+                    <div class="card-title">
+                        <h1 class="text-center">Sign Up</h1>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="cname">Organization/Company Name:</label>
+                                <input type="text" name="cname" id="cname" placeholder="Enter Company Name" required class="form-control">
+                                <label for="caddress">Address:</label>
+                                <input type="text" name="caddress" id="caddress" required placeholder="Contact Address" class="form-control">
+                                <label for="option">Select service Types:</label>
+                                <select class="form-control" id="serviceOp">
+                                    <option value="">Choose Service...</option>
+                                    <option value="Ambulance Service">Ambulance Service</option>
+                                    <option value="Hospital">Hospital</option>
+                                    <option value="Emergency Response Team">Emergency Response Team</option>
+                                    <option value="Police Traffic Division">Police Traffic Division</option>
+                                    <option value="Federal Road Saftey">Federal Road Saftey (FRSCN)</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                                <label for="desc" id="descLab" class="hide">Describe services:</label>
+                                <input type="text" name="desc" id="desc" placeholder="Service Description" class="form-control hide">
+                                <label for="cmail">Email:</label>
+                                <input type="text" name="mail" id="cemail" required placeholder="Email Address" class="form-control">
+                                <label for="cphone">Emergency Hotline:</label>
+                                <input type="text" name="phone" id="cphone" required placeholder="Phone Number" class="form-control">
+                                <label for="pass">Password:</label>
+                                <input type="text" name="pass" id="cpass" required placeholder="Password" class="form-control">
+                                <label for="pass1">Confirm Password:</label>
+                                <input type="text" name="pass1" id="cpass1" required placeholder="Confirm Password" class="form-control">
+                            </div>
+                            <span class="warn"></span> <br>
+                            <button class="btn btn-lg btn-primary serviceAcc">Create Account</button>
+                            <span class="info">Already have an Account? <a href="/signIn.html">Login Here</a></span>
+                        </form>
+                    </div>
+                </div>
             </div>
+            
         </div>
+
+        
     </div>
 
     <script src="/BootStrap/js/jquery-3.4.1.min.js"></script>

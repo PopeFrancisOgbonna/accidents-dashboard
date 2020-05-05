@@ -1,14 +1,22 @@
-body{
+
+.accidentImage{
+    width: 100%;
+    height: auto;
+}
+.card{
+    margin:10px 0;
     background:url('/src/img/caution.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
-.card{
-    max-width: 60%;
-    margin:15px auto;
-    background-color:rgba(238, 238, 238, 0.87);
+.card-body{
+    background-color:rgba(238, 238, 238, 0.568);
     border-radius: 20px;
     font-size: 1.5em;
+    margin: 0px 5px 5px 5px;
+}
+.card-title{
+    color:#fff;
 }
 .card a{
     color:red;
@@ -20,4 +28,20 @@ body{
 }
 .info{
     font-size:0.7em ;
+}
+.hide{
+    display: none;
+}
+.spinner{
+    border: 8px solid rgb(72, 206, 247);
+    border-radius: 50%;
+    border-top: 8px solid rgb(247, 114, 114);
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
