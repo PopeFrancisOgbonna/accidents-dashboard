@@ -63,7 +63,7 @@ servCreate.addEventListener('click', (e) => {
       spin(servCreate);
       setTimeout(() => {
         window.alert('Account created successfully. Please confirm the email sent to you.');
-        location.reload();
+        location.reload(true);
       }, 3000);
     }else{
       warning.innerHTML = 'Incorrect input';
@@ -93,7 +93,7 @@ userCreate.addEventListener('click', (e) => {
       spin(userCreate);
       setTimeout(() => {
         window.alert('Account created successfully. Please confirm the email sent to you.');
-        location.reload();
+        location.reload(true);
       }, 3000);
     }else{
       warning.innerHTML = 'Incorrect input';
